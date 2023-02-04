@@ -3,10 +3,13 @@
   display: grid;
   grid-template-rows: 80px 70px 4fr 4fr;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-template-areas:  "sidebar searchbar searchbar"
-                        "sidebar directory directory"
-                        "sidebar gallery gallery"
-                        "sidebar gallery gallery"
+  grid-template-areas:
+    'sidebar searchbar searchbar'
+    'sidebar directory directory'
+    'sidebar gallery gallery'
+    'sidebar gallery gallery';
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -16,35 +19,39 @@ img {
 
 .directory {
   grid-area: directory;
-  border: 1px solid black;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid black; */
 }
 
 .gallery {
   grid-area: gallery;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .help {
   grid-area: help;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .posting {
-  margin: 1vw;
+  margin: 1vw 0;
   grid-area: posting;
   float: left;
   width: 45%;
   height: 45%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .searchbar {
   font-size: 5vh;
   grid-area: searchbar;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .sideBar {
   grid-area: sidebar;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }

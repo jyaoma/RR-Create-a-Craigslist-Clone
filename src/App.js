@@ -1,14 +1,23 @@
 // Import data
+import { postings } from './postings';
 
 // Import components
-import './App.css';
+import Sidebar from './components/sidebar';
+import Gallery from './components/gallery';
 
-function App(){
+import './App.css';
+import SearchBar from './components/searchbar';
+import Directory from './components/directory';
+
+function App() {
+  const type = 'furniture';
   return (
     <div>
-      <h1>craigslist</h1>
       <div className="App">
-        {/* Your content will go here! */}
+        <Sidebar {...{ type }} />
+        <SearchBar {...{ type }} />
+        <Directory />
+        <Gallery {...{ postings }} />
       </div>
     </div>
   );
